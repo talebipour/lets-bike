@@ -1,5 +1,5 @@
 {
-  "name": "lazy-bikers",
+  "name": "lets-bike",
   "version": "0.1.0",
   "private": true,
   "proxy": "https://api.opentopodata.org/",
