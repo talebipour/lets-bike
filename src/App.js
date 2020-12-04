@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import './App.css'
 import Map from './Map'
-import PathExporter from './PathExporter'
+import PathImportExport from './PathImportExport'
 
 
 const gradientInputStyle = {width: '30px'}
@@ -11,12 +11,13 @@ function App() {
 
   return (
     <div>
-      <label>
-        Max Gradient: &nbsp;
-        <input type="number" value={maxGradient} maxLength={2} style={gradientInputStyle}
-               onChange={(event) => setMaxGradient(event.target.value)} />
-      </label>
-      &nbsp;
+      <div className="top-bar">
+        <label>
+          Max Gradient: &nbsp;
+          <input type="number" value={maxGradient} maxLength={2} style={gradientInputStyle}
+                onChange={(event) => setMaxGradient(event.target.value)} />
+        </label>
+      </div>
       <Map maxGradient={maxGradient} />
     </div>
   );
