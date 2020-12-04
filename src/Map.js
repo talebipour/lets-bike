@@ -53,8 +53,9 @@ class Map extends Component {
             <Popup>Destination Location</Popup>
           </Marker>
         }
-        { this.state.path.length > 0 &&
-          <Polyline pathOptions={pathOptions} positions={this.state.path} />
+        { this.state.path.map( (point, index , path) =>
+            index === 0 ? null : <Polyline pathOptions={pathOptions} positions={[path[index - 1], point]} />
+          )
         }
       </MapContainer>
     )
